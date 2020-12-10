@@ -1,0 +1,17 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    border-style: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+.box{
+    display: flex;
+}
+
