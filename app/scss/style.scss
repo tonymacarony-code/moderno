@@ -4,20 +4,20 @@
 
 // start header
 
-.header__top-inner{
+.header__top-inner {
     display: flex;
     justify-content: space-between;
     height: 91px;
     align-items: center;
 }
-.header__text{
+.header__text {
     margin-left: auto;
     padding-right: 87px;
-    span{
+    span {
         color: $red;
     }
 }
-.header__btn{
+.header__btn {
     padding: 4px;
     width: 72px;
     border-radius: 4px;
@@ -25,32 +25,32 @@
     color: #fff;
     font-size: 14px;
 }
-.header__btn-login{
+.header__btn-login {
     background-color: $green;
 }
-.header__btn-register{
+.header__btn-register {
     background-color: $red;
     margin-left: 7px;
 }
-.header__menu{
+.header__menu {
     background-color: $bg;
 }
-.menu{
+.menu {
     display: flex;
     align-items: center;
     height: 60px;
-}
-.menu__list{
-    li{
-        display: inline-block;
-        & +li{
-            margin-left: 30px;
+    &__list {
+        li {
+         display: inline-block;
+    & +li {
+        margin-left: 30px;
         }
     }
-    a{
+    a {
         color: #fff;
         font-size: 14px;
     }
+}
 }
 
 
@@ -58,34 +58,34 @@
 // end header
 // start search
 
-.search{
+.search {
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 532px;
 }
-.search__inner{
+.search__inner {
     padding: 155px 0 100px;
     color: #fff;
     text-align: center;
-    &-title{
+    &-title {
         margin-bottom: 10px;
        font-size: 48px;
        font-weight: 700;
        line-height: 72px;
     }
-    &-text{
+    &-text {
     margin-bottom: 54px;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
     }
-    &-form{
+    &-form {
         max-width: 670px;
         margin: 0 auto;
         position: relative;
-        input{
+        input {
             display: block;
             width: 100%;
              border-radius: 4px;
@@ -96,12 +96,12 @@
              font-weight: 500;
              padding-left: 25px;
         
-             &::placeholder{
+             &::placeholder {
                  color: #90a4ae;
                  font-weight: 500;
              }
         }
-        button{
+        button {
             position: absolute;
             border: none;
             background-color: transparent;
@@ -113,15 +113,15 @@
 // end search
 
 // start products
-.products{
+.products {
     padding: 121px 0px;
     background-color: $grey;
 
 }
-.products__inner-btn{
+.products__inner-btn {
     text-align: center;
     margin-bottom: 60px;
-    button{
+    button {
         padding: 12px 21px;
         border: none;
         background-color: #fff;
@@ -130,65 +130,74 @@
         & + button{
             margin-left: 6px;
         }
+        &:focus{
+            outline: none;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+            outline: none;
+        }
     }
 }
 
-.products__inner-box{
+.products__inner-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
 }
-.product__item{
+.product__item {
     max-width: 442px;
     width: 100%;
     box-shadow: 0px 1px 2px 0 rgba(205, 214, 222, 0.75);
     margin-bottom: 32px;
     &-img{
-    min-height: 250px;
-    background-repeat: no-repeat;
-    display: block;
-    background-position: center;
-    background-size: cover;
+      min-height: 250px;
+     background-repeat: no-repeat;
+     display: block;
+     background-position: center;
+     background-size: cover;
     }
-    &-content{
+    &-content {
         display: flex;
         justify-content: space-between;
         padding: 10px 32px;
         align-items: center;
         min-height: 90px;
         font-weight: 500;
-        // border-bottom: 1px solid #e7ecf2;
+        border-bottom: 1px solid #e7ecf2;
     }
-    &-name{
+        &-name {
         max-width: 310px;
-    }
-    &-title{
-    font-size: 18px;
-    color: $bg;  
-    display: block;
-    }
-    &-category{
+        }
+        &-title {
+        font-size: 18px;
+        color: $bg;  
+        display: block;
+        }
+    &-category {
         font-size: 14px;
         color: $green;
         display: block;
     }
-    &-price{
+    &-price {
         font-size: 20px;
         color: $bg;
         font-weight: 700;
     }
-    &-info{
+    &-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
         min-height: 70px;
         padding: 10px 30px;
     }
-    &-author{
+    &-author {
         display: flex;
         align-items: center;
-        .avatar{
+        max-width: 245px;
+        .avatar {
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -198,16 +207,23 @@
         background-size: cover;
         margin-right: 13px;
         }
-        span{
+        span {
          font-size: 14px;
           font-weight: 500;   
         }
     }
+    &-star {
+        font-size: 12px;
+       span {
+           color: $bg;
+       } 
+    }
 }
 
-.products__bottom-btn{
+.products__bottom-btn {
     text-align: center;
-    button{
+
+    button {
         margin: 45px 5px 0;
         box-shadow: 0px 1px 3px 0 rgba(204, 216, 228, 0.75);
         border: none;
@@ -215,9 +231,46 @@
         color: $bg;
         padding: 20px 30px;
         cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+            outline: none;
+        }
     }
 }
 // end products
 
+// start product-slider
+.product-slider{
+    padding: 110px 0px 120px;
+    .slick-dots {
+        text-align: center;
+        margin-top: 50px;
+        li {
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 3px;
+            &.slick-active{
+                button{
+                background-color: $green;
+            }
+            }
 
+            button{
+                border-radius: 50%;
+                border: none;
+                width: 16px;
+                height: 16px;
+                font-size: 0;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
     
+}
+    
+// end product-slider

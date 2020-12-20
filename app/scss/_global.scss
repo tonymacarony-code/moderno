@@ -1,11 +1,6 @@
 html{
     box-sizing: border-box;
 }
-*,
-*::before,
-*::after{
-    border-style: inherit;
-}
 
 a{
     display: inline-block;
@@ -51,4 +46,9 @@ body{
     font-size: 36px;
     line-height: 60px;
     margin-bottom: 36px;
+}
+
+.rate-star{
+    display: inline-block;
+    margin-right: 13px;
 }
