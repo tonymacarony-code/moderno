@@ -398,6 +398,21 @@
                       }
                 }
 }
-
-
 //end author
+
+//start tutorial
+
+.tutorial__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 66px;
+}
+
+.tutorial__inner {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+//end tutorial
