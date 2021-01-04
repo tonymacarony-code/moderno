@@ -402,17 +402,103 @@
 
 //start tutorial
 
-.tutorial__title {
-    display: flex;
-    justify-content: center;
-    margin-top: 66px;
+.tutorial { 
+    &__title {
+        margin-top: 66px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    } 
+    &__product {
+        margin-top: 57px;
+    }
+    &__image {
+        width: 370px;
+        height: 270px;
+    }
+    &__text {
+        @include f700;
+        text-align: center;
+        background-color: $grey;
+        color: $bg;
+        font-size: 24px;
+        line-height: 19px;
+        padding: 39px 0; 
+
+    }
 }
-
-.tutorial__inner {
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-
 //end tutorial
+
+//start footer
+.footer {
+    background-color: $bg;
+    margin-top: 121px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-top: 116px;
+        font-size: 22px;
+        line-height: 24px;
+        @include f700;
+        color: #fff;  
+    }
+    &__text {
+        max-width: 261px;
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 32px;
+    }
+    &__contact  {
+    font-size: 14px;
+    line-height: 24px;
+    color:#fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 213px;
+    margin-top: 36px;
+    }
+}
+
+a.adress::before  {
+    content: '';
+    background-image: url(../images/footer/icon1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+    height: 20px;
+    margin-right: 19px;
+}
+
+a.number::before  {
+    content: '';
+    background-image: url(../images/footer/icon2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+    height: 20px;
+    margin-right: 19px;
+}
+
+
+
+
+
+.footer__title:after {
+    content: '';
+    background-color: $green;
+    width: 51px;
+    height: 3px;
+    display: block;
+    margin-top: 23px;
+}    
+
+
+
+
+
+//end footer
