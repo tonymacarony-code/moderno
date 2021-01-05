@@ -450,19 +450,37 @@
         font-size: 15px;
         line-height: 24px;
         margin-top: 32px;
+        @include f500;
     }
     &__contact  {
     font-size: 14px;
     line-height: 24px;
     color:#fff;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     width: 213px;
     margin-top: 36px;
+    position: relative;
+    left: 19px;
     }
+    &__links {
+    font-size: 15px;
+    line-height: 36px;
+    color: #b7c3c8;
+    @include f500;
+        ul {
+        margin-top: 34px;
+            li {
+                list-style-type: circle;
+                position: relative;
+                left: 20px;
+            }
+        }
+    }
+     
+
 }
 
-a.adress::before  {
+a.adress::before  {     // Я знаю, что у adress и before все одинаково, но как их вместе написать не знаю((
     content: '';
     background-image: url(../images/footer/icon1.png);
     background-size: 100%;
@@ -470,9 +488,9 @@ a.adress::before  {
     background-position: center;
     width: 10px;
     height: 20px;
-    margin-right: 19px;
+    position: absolute;
+    left: -19px;
 }
-
 a.number::before  {
     content: '';
     background-image: url(../images/footer/icon2.png);
@@ -481,12 +499,9 @@ a.number::before  {
     background-position: center;
     width: 10px;
     height: 20px;
-    margin-right: 19px;
+    position: absolute;
+    left: -19px;
 }
-
-
-
-
 
 .footer__title:after {
     content: '';
