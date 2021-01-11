@@ -443,7 +443,21 @@
         font-size: 22px;
         line-height: 24px;
         @include f700;
-        color: #fff;  
+        color: #fff;
+            &::after {
+            content: '';
+            background-color: $green;
+            width: 51px;
+            height: 3px;
+            display: block;
+            margin-top: 23px;
+            }
+            &.form-title {
+                margin-top: 41px;
+                &::after {
+                    display: none;
+                }
+            }
     }
     &__text {
         max-width: 261px;
@@ -451,6 +465,7 @@
         line-height: 24px;
         margin-top: 32px;
         @include f500;
+        color: #b7c3c8;
     }
     &__contact  {
     font-size: 14px;
@@ -461,58 +476,98 @@
     margin-top: 36px;
     position: relative;
     left: 19px;
+        &::before  {    
+            content: '';
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 10px;
+            height: 20px;
+            position: absolute;
+            left: -19px;
+        }
+        &.adress {    
+            &::before {
+             background-image: url(../images/footer/icon1.png);   
+            }
+        }
+        &.number {      
+            &::before {
+            background-image: url(../images/footer/icon2.png);
+            }
+        }
     }
     &__links {
     font-size: 15px;
     line-height: 36px;
-    color: #b7c3c8;
     @include f500;
         ul {
         margin-top: 34px;
+        position: relative;
+        left: 15px;
             li {
-                list-style-type: circle;
-                position: relative;
-                left: 20px;
+                list-style-image: url(../images/footer/bullet.png);
+                padding-left: 15px;
+                a {
+                    color: #b7c3c8;
+                }
             }
         }
     }
-     
-
+    &__social {
+        margin-top: 35px;
+        display: inline-block;
+        a img {
+        width: 28px;
+        height: 28px;
+        margin-right: 6px;
+        }
+    }
+    &__bottom {
+        margin-top: 99px;
+        min-height: 73px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid;
+        border-color: #424d53;
+        line-height: 36px;
+    }
+    &__form {
+        margin-top: 18px;
+        position: relative;
+        input[type=email]{
+        width: 261px;
+        height: 40px;
+        padding: 1px 1px 1px 16px;
+        border-style: solid;
+        border-width: 1px;
+        border-image-source: linear-gradient(to bottom, #000000, #263238);
+        border-image-slice: 1;
+        background-color: #2f3c43;
+        }
+        input[type=button]{
+            position: absolute;
+            width: 43px;
+            height: 100%;
+            background-color: $green;
+            bottom: 0;
+            right: 0;
+            border: none;
+        }
+        .send-icon {
+            position: absolute;
+            width: 16px;
+            height: 17px;
+            bottom: 14px;
+            right: 14px;
+            z-index: 9;
+            img {
+                height: 100%;
+            }
+        }
+    }
 }
-
-a.adress::before  {     // Я знаю, что у adress и before все одинаково, но как их вместе написать не знаю((
-    content: '';
-    background-image: url(../images/footer/icon1.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 10px;
-    height: 20px;
-    position: absolute;
-    left: -19px;
-}
-a.number::before  {
-    content: '';
-    background-image: url(../images/footer/icon2.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 10px;
-    height: 20px;
-    position: absolute;
-    left: -19px;
-}
-
-.footer__title:after {
-    content: '';
-    background-color: $green;
-    width: 51px;
-    height: 3px;
-    display: block;
-    margin-top: 23px;
-}    
-
-
 
 
 
