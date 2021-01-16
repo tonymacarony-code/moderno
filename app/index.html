@@ -14,7 +14,6 @@
 
 <body>
     <header class="header">
-
         <div class="header__top">
             <div class="container">
                 <div class="header__top-inner">
@@ -31,7 +30,7 @@
                         <a class="header__phone" href="tel:61383766284">61 3 8376 6284</a>
                     </div>
                     <div class="header__box">
-                        <div class="notification__box">
+                        <div class="notification__box header__btn-login--off">
                             <div class="circle__menu notification__menu">
                                 <a href="#" class="circle__item icon-bell-o icons-color">
                                     <img class="circle__images" src="images/header__menu/message1.jpg" alt="">
@@ -71,7 +70,7 @@
                                 <span>8</span>
                             </a>
                         </div>
-                        <div class="message__box">
+                        <div class="message__box header__btn-login--off">
                             <a class="message header__circle active icon-envelope-o" href="#">
                                 <span>5</span>
                             </a>
@@ -169,7 +168,7 @@
                         </div>
 
                         <div class="user__box">
-                            <a class="user" href="">
+                            <a class="user header__btn-login--off" href="">
                                 <div class="user__inner">
                                     <div class="user__images">
                                         <img src="images/content/user-login.jpg" alt="">
@@ -199,9 +198,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <a class="header__btn header__btn-login header__btn-login--off" href="">Login</a>
-                        <a class="header__btn header__btn-logout header__btn-login--on" href="">Logout</a>
-                        <a class="header__btn header__btn-register header__btn-login--off" href="">Register</a>
+                        <a class="header__btn header__btn-login" href="">Login</a>
+                        <a class="header__btn header__btn-logout header__btn-login--off" href="">Logout</a>
+                        <a class="header__btn header__btn-register" href="">Register</a>
+                    </div>
+                    <div class="header__btn-menu icon-user">
 
                     </div>
                 </div>
@@ -210,6 +211,11 @@
         <div class="header__menu">
             <div class="container">
                 <nav class="menu">
+                    <div class="menu__btn">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     <ul class="menu__list">
                         <li>
                             <a href="#">
@@ -1191,16 +1197,9 @@
         </div>
     </footer>
 
-
-
-
-
-
-
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 
 </html>

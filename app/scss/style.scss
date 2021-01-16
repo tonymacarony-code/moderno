@@ -109,12 +109,12 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
     background-color: $green;       
     }
 }
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -209,11 +209,11 @@
 }
 .circle__menu {
     position: absolute;
-    top: 62px;
+    top: 52px;
     right: 0;
-    border-top: solid 0.2px #cccccc;
     height: 0;
     overflow: hidden;
+    z-index: 1;
 }
 .circle__item {
     background-color: #fff;
@@ -226,6 +226,7 @@
     position: relative;
     font-family: 'Roboto-Regular', sans-serif;
     transition: all .3s;
+    border-top: solid 0.2px #cccccc;
     &::before {
         position: absolute;
         top: 28px;
@@ -300,7 +301,10 @@
 .icons-color::before {
     color: $tomato;
 }
-
+.header__btn-menu, 
+.menu__btn {
+    display: none;
+}
 // end header
 // start search
 
@@ -680,12 +684,12 @@
 .footer {
     background-color: $bg;
     margin-top: 121px;
+    padding-top: 116px;
     &__inner {
         display: flex;
         justify-content: space-between;
     }
     &__title {
-        margin-top: 116px;
         font-size: 22px;
         line-height: 24px;
         @include f700;
@@ -706,12 +710,15 @@
             }
     }
     &__text {
-        max-width: 261px;
+        width: 261px;
         font-size: 15px;
         line-height: 24px;
         margin-top: 32px;
         @include f500;
         color: #b7c3c8;
+        @media screen and (max-width: 1150px) {
+            width: auto;
+         }
     }
     &__contact  {
     font-size: 14px;
@@ -722,6 +729,9 @@
     margin-top: 36px;
     position: relative;
     left: 19px;
+    @media screen and (max-width: 1150px) {
+        width: auto;
+     }
         &.adress::before, &.number:before {
             position: absolute;
             color: $green;
@@ -812,3 +822,17 @@
 
 
 //end footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
