@@ -1,5 +1,6 @@
 .contact {
     background-color: #f4f6f5;
+    padding-bottom: 137px;
     &__wrapper {
         border: solid 0.2px #d7d7d7;
         background-color: #fff;
@@ -18,6 +19,13 @@
     &__map {
         margin-top: 32px;
         padding-bottom: 62px;
+    }
+    &__total {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__infos {
+        flex: 30%;
     }
     &__info {
         display: block;
@@ -58,22 +66,30 @@
         }
     }
     &__form {
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        flex: 70%;
+        margin-top: 0;
             &-title {
                 color: #333333;
-                margin-top: 61px;
                 padding-bottom: 23px;
                 font-size: 24px;
-                font-weight: 500;
+                font-weight: 700;
             }
             input {
-                max-width: 351px;
-                padding: 16px 289px 16px 16px;
+                box-sizing: border-box;
+                width: 49%;
+                padding: 16px;
                 background-color: #f1f4f5;
                 color: #7a7a7a;
                 font-size: 15px;
                 border: none;
             }
             textarea {
+                flex: 100%;
                 max-width: 726px;
                 background-color: #f1f4f5;
                 margin-top: 28px;

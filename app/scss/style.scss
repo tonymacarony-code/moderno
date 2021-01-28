@@ -417,12 +417,21 @@
     &__list {
         li {
             display: inline-block;
-            padding-right: 22px;
+            &::after {
+                content: '-';
+                color: $green;
+                margin: 0 5px;
+                margin-left: 10px;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
             a {
             font-size: 15px;
             color: #b0bec5;
             }
-
         }
     }
 }
@@ -801,7 +810,6 @@
 //start footer
 .footer {
     background-color: $bg;
-    margin-top: 121px;
     padding-top: 116px;
     &__inner {
         display: flex;
