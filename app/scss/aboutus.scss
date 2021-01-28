@@ -1,0 +1,35 @@
+.aboutus {
+    background-color: #f4f6f5;
+    &__wrapper {
+        border: solid 0.2px #d7d7d7;
+        background-color: #fff;
+    }
+    &__head {
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #444444;
+        padding: 23px 27px;
+        border-bottom: solid 0.2px #d7d7d7;
+    }
+    &__inner {
+        display: block;
+        margin-left: 50px;
+    }
+    &__title {
+        margin-top: 44px;
+        font-size: 20px;
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 700;
+        padding-bottom: 15px;
+    }
+    &__text {
+        max-width: 1052px;
+    }
+}
+.ourmission {
+    margin-top: 53px;
+    &-text {
+        padding-bottom: 54px;
+    }
+}

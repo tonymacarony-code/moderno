@@ -2,12 +2,13 @@
     &__wrapper {
         border: solid 0.2px #d7d7d7;
         background-color: #fff;
+        margin-bottom: 150px;
     }
     &__head {
         font-size: 24px;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        color: #4444;
+        color: #444444;
         padding: 23px 27px;
         border-bottom: solid 0.2px #d7d7d7;
     }
@@ -16,6 +17,50 @@
         background-color: #8bc34a;
     }
     &__404 {
-
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 300px;
+        color: #fff;
+        padding-top: 70px;
+        padding-bottom: 59px;
+        line-height: 300px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url(../images/content/404.png);
+            width: 250px;
+            height: 292px;
+            background-repeat: no-repeat;
+            margin-left: 15px;
+        }
+    }
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        color: #fff;
+        letter-spacing: 6px;
+        padding-bottom: 33px;
+    }
+    &__text{
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        width: 529px;
+        margin: 0 auto;
+        padding-bottom: 56px;
+    }
+    &__link{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        border-radius: 4px;
+        border: solid 0.4px #ffffff;
+        padding: 22px 32px;
+        margin-bottom: 101px;
     }
 }

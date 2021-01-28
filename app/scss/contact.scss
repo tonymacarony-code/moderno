@@ -1,0 +1,108 @@
+.contact {
+    background-color: #f4f6f5;
+    &__wrapper {
+        border: solid 0.2px #d7d7d7;
+        background-color: #fff;
+    }
+    &__head {
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #444444;
+        padding: 23px 27px;
+        border-bottom: solid 0.2px #d7d7d7;
+    }
+    &__inner {
+        margin: 0px 40px;
+    }
+    &__map {
+        margin-top: 32px;
+        padding-bottom: 62px;
+    }
+    &__info {
+        display: block;
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            margin-left: 41px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 44px;
+                height: 4px;
+                background-color: #8bc34a;
+                display: block;
+                margin-top: 20px;
+            }
+            &.mapmarker::before, &.phone::before {
+                font-family: 'icomoon';
+                font-size: 24px;
+                position: absolute;
+                left: -41px;
+                color: #8bc34a;
+            }
+            &.mapmarker:before {
+                content: "\f041";
+                }
+            &.phone:before {
+                content: "\f095";
+                }
+        }
+        &-text {
+            max-width: 225px;
+            font-size: 15px;
+            color: #707070;
+            padding: 52px 0 41px 41px;
+        }
+    }
+    &__form {
+            &-title {
+                color: #333333;
+                margin-top: 61px;
+                padding-bottom: 23px;
+                font-size: 24px;
+                font-weight: 500;
+            }
+            input {
+                max-width: 351px;
+                padding: 16px 289px 16px 16px;
+                background-color: #f1f4f5;
+                color: #7a7a7a;
+                font-size: 15px;
+                border: none;
+            }
+            textarea {
+                max-width: 726px;
+                background-color: #f1f4f5;
+                margin-top: 28px;
+                border: none;
+                height: 190px;
+                width: 100%;
+                padding-left: 18px;
+                padding-top: 16px;
+                &::placeholder {
+                    color: #7a7a7a;
+                    font-size: 15px;
+                }
+            }
+            button {
+                display: block;
+                padding: 22px 35px;
+                background-color: #8bc34a;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                border: none;
+                margin-top: 22px;
+                margin-bottom: 15px;
+            }
+        } 
+}
+iframe {
+    width: 100%;
+    }
+form input:last-child {
+    margin-left: 25px;
+}
