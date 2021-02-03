@@ -1,0 +1,53 @@
+@import 'vars';
+
+
+.upload {
+    padding-bottom: 107px;
+    background-color: $grey;
+    &__inner {
+        border: solid 0.2px #d7d7d7;
+        background-color: #fff;
+    }
+    &__head {
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #444444;
+        padding: 23px 27px;
+        border-bottom: solid 0.2px #d7d7d7;
+        background-color: #fff;
+    }
+    &__box {
+        
+        margin-left: 45px;
+        &:first-child {
+            margin-top: 43px;
+        }
+    }
+    &__text {
+        font-size: 15px;
+        color: #444444;
+        @include f500;
+        &::after {
+            content: '*';
+            color: $green;
+        }
+    }
+}
+button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 40px 19px 36px;
+    background-color: #8bc34a;
+    margin-top: 24px;
+    margin-left: 220px;
+    margin-bottom: 68px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        background-color: #263238;
+        transition: all .3s;
+      }
+}

@@ -22,13 +22,56 @@
     }
     &__box {
         padding-left: 38px;
-        input[type=text] {
+        &--row {
+          display: flex;
+          align-items: flex-start;
+          margin-top: 20px;
+          &:first-child {
+            margin-top: 43px;
+          }
+          
+          .withdrawals__text {
+            min-width: 170px;
+            margin-right: 58px;
+            padding-top: 0;
+          }
+          .withdrawals__select, input, textarea {
+            max-width: 900px;
+          }
+          // textarea {
+          //   margin-right: 49px;
+          // }
+          // input {
+          //   &:last-child {
+          //     margin-right: 52px;
+          //   }
+          // }
+          
+        }
+        input {
             box-sizing: border-box;
             padding-top: 16px;
             padding-left: 20px;
             padding-bottom: 12px;
             min-width: 492px;
             width: 100%;
+            background-color: #f9f9f9;
+            border: none;
+            font-size: 15px;
+            font-family: 'Myriad Pro' sans-serif;
+            color: #707070;
+            border: 0.2px solid #d7d7d7;
+            outline: none;
+            margin-left: 0 !important;  
+        }
+        textarea {
+          box-sizing: border-box;
+            padding-top: 16px;
+            padding-left: 20px;
+            padding-bottom: 12px;
+            min-width: 492px;
+            width: 100%;
+            min-height: 150px;
             background-color: #f9f9f9;
             border: none;
             font-size: 15px;
