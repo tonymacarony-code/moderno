@@ -4,6 +4,7 @@
 @import '404';
 @import 'aboutus';
 @import 'contact';
+@import 'withdrawals';
 
 // start header
 
@@ -341,7 +342,7 @@
             font-family: 'icomoon';
             color: #fff;
             font-size: 14px;
-            left: 18px;
+            left: 35px;
             top: 10px;
         }
     }
@@ -780,6 +781,7 @@
 //start tutorial
 
 .tutorial { 
+    padding-bottom: 121px;
     &__title {
         margin-top: 66px;
     }

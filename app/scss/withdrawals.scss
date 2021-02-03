@@ -1,0 +1,159 @@
+.withdrawals {
+    background-color: #f4f6f5;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__head {
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #444444;
+        padding: 23px 27px;
+        border-bottom: solid 0.2px #d7d7d7;
+        background-color: #fff;
+    }
+    &__earnings {
+        padding-right: 40px;
+        border: solid 0.2px #d7d7d7;
+        padding-bottom: 45px;
+        background-color: #fff;
+        margin-bottom: 145px;
+    }
+    &__box {
+        padding-left: 38px;
+        input[type=text] {
+            box-sizing: border-box;
+            padding-top: 16px;
+            padding-left: 20px;
+            padding-bottom: 12px;
+            min-width: 492px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border: none;
+            font-size: 15px;
+            font-family: 'Myriad Pro' sans-serif;
+            color: #707070;
+            border: 0.2px solid #d7d7d7;
+            outline: none;
+            margin-left: 0 !important;  
+        }
+        input[type=password] {
+            box-sizing: border-box;
+            padding-top: 16px;
+            padding-left: 19px;
+            padding-bottom: 15px;
+            min-width: 492px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border: none;
+            border: 0.2px solid #d7d7d7;
+            margin-left: 0 !important;  
+        }
+        
+    }
+    &__select {
+        display: block;
+        font-size: 15px;
+        font-family: 'Myriad Pro' sans-serif;
+        color: #707070;
+        padding: .6em 1.4em .5em .8em;
+        width: 100%;
+        min-width: 492px;
+        box-sizing: border-box;
+        margin: 0;
+        border: 0.2px solid #d7d7d7;
+        box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color:#f9f9f9;
+        background-image: url('../images/icons/line-angle-down.svg');
+        background-repeat: no-repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        outline: none;
+        &::-ms-expand {
+          display: none;
+        }
+        option {
+          font-weight: normal;
+        }
+      }
+      *[dir="rtl"] .withdrawals__select {
+        background-position: left .7em top 50%, 0 0;
+        padding: .6em .8em .5em 1.4em;
+      }
+      :root {
+        &:lang(ar) .select-css, &:lang(iw) .select-css {
+          background-position: left .7em top 50%, 0 0;
+          padding: .6em .8em .5em 1.4em;
+        }
+      }
+    &__text {
+        padding-top: 29px;
+        padding-bottom: 21px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #263238;
+        &::after {
+            content: "*";
+            color: #8bc34a;
+            font-size: 24px;
+        }
+    }
+    button {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 19px 30px;
+        background-color: #8bc34a;
+        margin-top: 38px;
+        border: none;
+        cursor: pointer;
+        margin-left: 38px;
+        outline: none;
+        &:hover {
+            background-color: #263238;
+            transition: all .3s;
+          }
+      }
+  &__history {
+    border: solid 0.2px #d7d7d7;
+  }    
+
+  &__line {
+    padding: 33px 40px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #444444;
+    display: flex;
+    
+    &:nth-child(odd) {
+      background:#fff;
+    }
+    &:nth-child(even) {
+      background: #f9f9f9;
+    }
+    &-date {
+      padding-right: 20px;
+    }
+    &-email {
+      padding-right: 20px;
+    }
+    &-price {
+      padding-right: 20px;
+    }
+   &-status {
+      padding-right: 20px;
+      color: #8bc34a;
+    }
+  }
+
+}
+.pending {
+  color: #444444;
+}
+.last {
+  padding-bottom: 37px;
+}
