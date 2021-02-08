@@ -38,15 +38,9 @@
           .withdrawals__select, input, textarea {
             max-width: 900px;
           }
-          // textarea {
-          //   margin-right: 49px;
-          // }
-          // input {
-          //   &:last-child {
-          //     margin-right: 52px;
-          //   }
-          // }
-          
+          .withdrawals__head:last-child {
+            margin-top: 71px;
+          }
         }
         input {
             box-sizing: border-box;

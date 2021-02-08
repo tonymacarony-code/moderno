@@ -1,0 +1,113 @@
+@import 'vars';
+
+.profile {
+    background-color: #f4f6f5;
+    &__inner {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    &-status {
+        font-size: 13px;
+        padding: 6px 9px 5px 30px;
+        border: 1px solid #d6d6d6;
+        color: #707070;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 13px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+    }
+    &__content {
+       width: 100%; 
+    }
+    &-on {
+        &::before {
+            background-color: $green;
+        }
+    }
+    &-off {
+        &::before {
+            background-color: red;
+        }
+    }
+    &__aside {
+        margin-right: 30px;
+        max-width: 270px;
+        width: 100%;
+
+        &-btn {
+            margin-bottom: 13px;
+            margin-top: 26px;
+        }
+        &-message, &-following {
+            margin-bottom: 17px;
+            display: block;
+            width: 96%;
+            font-size: 16px;
+            color: #fff;
+            @include f500;
+            padding: 18px 10px;
+            text-align: center;
+            box-shadow: 0px 1px 2px 0 rgba(69, 90, 100, 0.75);
+        }
+
+        &-following {
+            @include f700;
+            background-color: $green;
+        }
+        &-message {
+            position: relative;
+            background-color: $text;
+            &::before {
+                position: absolute;
+                content: '\f003';
+                font-family: 'icomoon';
+                left: 50px;
+                top: 17px; 
+            }
+        }
+    }
+    &__banner {
+        padding: 20px;
+        border: 1px solid #dedede;
+        margin-bottom: 35px;
+        &-images {
+            background-image: url(../images/content/banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            min-height: 332px;
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        border: solid 0.2px #d7d7d7;
+        
+    }
+    &__item {
+        width: 25%;
+        background-color: #fff;
+        padding: 20px 5px 17px;
+        text-align: center;
+        & + .profile__item {
+            border-left: 1px solid #dedede;
+        }
+        &-title {
+            @include f500;
+        }
+        &-content {
+            font-size: 14px;
+            color: #707070;
+            &-price {
+                font-weight: 700;
+            }
+        }
+    }
+
+}

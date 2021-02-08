@@ -277,100 +277,92 @@
             <div class="breadcrumbs__inner">
                 <ul class="breadcrumbs__list">
                     <li><a href="#">Home</a></li>
-                    <li><span>Upload Product</span></li>
+                    <li><span>Settings</span></li>
                 </ul>
             </div>
         </div>
     </div>
-    <section class="upload">
+
+    <section class="settings">
         <div class="container">
-            <div class="upload__inner">
-                <div class="withdrawals__head">
-                    Upload Your item
+            <div class="product-one__tabs settings__tabs">
+                <div class="tabs">
+                    <span class="tab active angle-right" data-id="1">Personal Information</span>
+                    <span class="tab angle-right" data-id="2">Profile</span>
+                    <span class="tab angle-right" data-id="3">Badges</span>
+                    <span class="tab angle-right" data-id="4">E-mail Settings</span>
+                    <span class="tab angle-right" data-id="5">Social Network</span>
                 </div>
-                <form>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Select Categories
+                <div class="tab_content">
+                    <div class="tab-item active-tab" id="1">
+                        <div class="page-box">
+                            <div class="page-box__title">
+                                Personal Information
+                            </div>
+                            <div class="page-box__content">
+                                <form>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">First Name</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Last Name</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Company Name</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Country</div>
+                                        <select name="Select Your Country">
+                                            <option value="Select Your Country">Select Your Country</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="Belarus">Belarus</option>
+                                        </select>
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Address Line 1</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Address Line 2</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">City</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">State / Province / Region</div>
+                                        <input type="text">
+                                    </div>
+                                    <div class="settings__line">
+                                        <div class="settings__line-text">Zip / Postal Code </div>
+                                        <input type="text">
+                                    </div>
+                                    <button>Update </button>
+                                </form>
+                            </div>
                         </div>
-                        <select class="withdrawals__select">
-                            <option disabled selected>Select</option>
-                            <option value="Option 1">Option 1</option>
-                            <option value="Option 2">Option 2</option>
-                        </select>
                     </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Product Name
-                        </div>
-                        <input type="text" placeholder="Enter your product name here ..." required>
+                    <div class="tab-item" id="2">
+
                     </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Product Description
-                        </div>
-                        <textarea placeholder="Type your text  here" required></textarea>
+                    <div class="tab-item" id="3">
+
                     </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Upload Main File
-                        </div>
-                        <input name="Choose File" type="file">
+                    <div class="tab-item" id="4">
+
                     </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Upload Screenshots
-                        </div>
-                        <input name="Choose File" type="file">
+                    <div class="tab-item" id="5">
+
                     </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            File Included
-                        </div>
-                        <select class="withdrawals__select">
-                            <option disabled selected>Select File Type </option>
-                            <option value="PSD">PSD</option>
-                            <option value="WordPress">WordPress</option>
-                        </select>
-                    </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            File Dimensions
-                        </div>
-                        <input type="text" placeholder="Enter the item  dimentionss here ..." required>
-                    </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Item Tags
-                        </div>
-                        <input type="text" placeholder="Enter Tag Here" required>
-                    </div>
-                </form>
-                <div class="withdrawals__head">
-                    Set Your Price (US$)
                 </div>
-                <form>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Regular License
-                        </div>
-                        <input type="number" placeholder="$00.00" required>
-                    </div>
-                    <div class="withdrawals__box withdrawals__box--row">
-                        <div class="withdrawals__text">
-                            Extended License
-                        </div>
-                        <input type="number" placeholder="$00.00" required>
-                    </div>
-                </form>
-                <button>Submit</button>
+
             </div>
         </div>
     </section>
-
-
-
-
 
 
 
