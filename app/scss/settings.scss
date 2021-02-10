@@ -4,6 +4,7 @@
 .product-one__tabs.settings__tabs {
     display: flex;
     .tabs {
+        margin-bottom: auto;
         max-width: 270px;
         margin-right: 30px;
         border: 1px solid #dedede;
@@ -11,23 +12,63 @@
         display: block;
         text-align-last: left;
         width: 100%;
+        .tab {
+            &.i {
+                position: relative;
+                font-family: 'Roboto-Regular', sans-serif;
+                &.active {
+                    border-bottom: 1px solid $green;
+                    color: #37474f;
+                    &::before {
+                        color: $green;
+                    }
+                }
+                &::before {
+                    content: '';
+                    font-family: 'icomoon';
+                    position: absolute;
+                    top: 17px;
+                    left: 23px;
+                    color: #d0d0d0;  
+                }
+                &.user {
+                    &::before {
+                        content: '\f007';
+                    }
+                }
+                &.suitcase {
+                    &::before {
+                        content: '\f0f2';
+                    }
+                }
+                &.envelope-o {
+                    &::before {
+                        content: '\f003';
+                    }
+                }
+                &.comments-o {
+                    &::before {
+                        content: '\f0e5';
+                    }
+                }
+                &.group {
+                    &::before {
+                        content: '\f0c0';
+                    }
+                }
+            }
+        }
         span {
             display: block;                                                                                                                                                                                                               
             background-color: #fff;
             padding: 17px 17px 17px 58px;
             color: #707070;
             @include f500;
-            &.active {
-                border-bottom: 1px solid $green;
-                color: #37474f;
-                &::before {
-                    color: $green;
-                }
-            }
             &::before {
                 left: 24px;
                 color: #444444;
             }
+                
         }
     }
     .tab_content {
@@ -43,18 +84,49 @@
     background-color: #fff;
     border: 1px solid #d7d7d7;
     min-height: 100%;
+    padding: 40px 46px 52px 42px;
     &__title {
-        border-bottom: 1px solid #d7d7d7;
-        font-size: 24px;
-        @include f500;
+        font-size: 20px;
+        @include f700;
         color: $bg;
-        padding-left: 34px;
-        padding-top: 21px;
-        padding-bottom: 25px;
+        padding-bottom: 32px;
+        &--skills {
+            padding-bottom: 27px;
+        }
     }
     &__content {
-        margin-left: 39px;
-        margin-top: 33px;
+        padding-bottom: 46px;
+        font-size: 15px;
+    }
+    &__skills {
+        &-head {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-name {
+            font-size: 16px;
+            color: $bg;
+            font-style: italic;
+            @include f500;
+            padding-bottom: 14px;
+        }
+        &-degree {
+            font-size: 16px;
+            color: $bg;
+            @include f700;
+        }
+        &-line {
+            height: 15px;
+            background-color: #f4f4f4;
+            border-radius: 3px;
+            margin-bottom: 23px;
+            span {
+                display: block;
+                height: 15px;
+                border-radius: 3px;
+                background-image: url(../images/content/progress-bar.png);
+            }
+        }
     }
 }
 .settings {
@@ -108,5 +180,11 @@
     button {
         margin-top: 25px;
         margin-left: 197px;
+        padding: 16px 30px;
+        background-color: $green;
+        font-size: 16px;
+        color: #fff;
+        @include f500;
+        border: none
     }
 }
