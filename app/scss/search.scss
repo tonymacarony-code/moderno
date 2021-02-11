@@ -1,0 +1,81 @@
+@import 'vars';
+
+// start search
+.breadcrumbs {
+    background-color: #f4f6f5;
+    padding-top: 49px;
+    padding-bottom: 43px;
+    &__list {
+        li {
+            display: inline-block;
+            &::after {
+                content: '-';
+                color: $green;
+                margin: 0 5px;
+                margin-left: 10px;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            a {
+            font-size: 15px;
+            color: #b0bec5;
+            }
+        }
+    }
+}
+
+.search {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 532px;
+}
+.search__inner {
+    padding: 155px 0 100px;
+    color: #fff;
+    text-align: center;
+    &-title {
+        margin-bottom: 10px;
+       font-size: 48px;
+       @include f700;
+       line-height: 72px;
+    }
+    &-text {
+    margin-bottom: 54px;
+    font-size: 20px;
+    @include f500;
+    line-height: 30px;
+    }
+    &-form {
+        max-width: 670px;
+        margin: 0 auto;
+        position: relative;
+        input {
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+            height: 56px;
+            box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
+            border: none;
+            font-size: 14px;
+            @include f500;
+            padding-left: 25px;
+             &::placeholder {
+                 color: #90a4ae;
+                 @include f500;
+             }
+        }
+        button {
+            position: absolute;
+            border: none;
+            background-color: transparent;
+            right: 0px;
+            top: 16px;
+        }
+    }
+}
+// end search

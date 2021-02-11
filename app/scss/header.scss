@@ -1,0 +1,307 @@
+@import 'vars';
+
+// start header
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 91px;
+    align-items: center;
+}
+.header__text {
+    margin-left: auto;
+    padding-right: 87px;
+    span {
+        color: $red;
+    }
+}
+.header__btn {
+    padding: 4px;
+    width: 72px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.header__btn-login {
+    background-color: $green;
+}
+.header__btn-login--off {
+    display: none;
+}
+.header__btn-logout {
+    display: none;
+    &.header__btn-login--on {
+        display: block;
+    }
+}
+.header__btn-register, .header__btn-logout {
+    background-color: $red;
+    margin-left: 7px;
+}
+.header__menu {
+    background-color: $bg;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    &__list {
+        li {
+         display: inline-block;
+    & +li {
+        margin-left: 30px;
+        }
+    }
+    a {
+        color: #fff;
+        font-size: 14px;
+    }
+}
+}
+
+.header__circle {
+    display: none;
+    width: 34px;
+    height: 34px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    position: relative;
+    &.active {
+        display: block;
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+    span {
+        position: absolute;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        line-height: 18px;
+        right: -7px;
+        top: -7px;
+        font-size: 11px;
+        color: #fff;
+    }
+}
+.header__box {
+    display: flex;
+    align-items: center;
+}
+
+.notification {
+    span {
+    background-color: $yellow;
+    }
+}
+.message {
+    span {
+    background-color: $tomato;
+    }
+}
+.basket {
+    margin-right: 20px;
+    span {
+    background-color: $green;       
+    }
+}
+.user {
+    margin-right: 25px;
+    padding-right: 20px;
+    position: relative;
+    &::before {
+        content: "\f107";
+        position: absolute;
+        font-family: 'icomoon';
+        font-size: 16px;
+        color: #707070;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+    }
+   &__inner {
+       display: flex;
+       align-items: center;
+   }
+   &__images {
+       margin-right: 15px;
+       width: 34px;
+       height: 34px;
+       overflow: hidden;
+       border-radius: 50%;
+   }
+   &__info {
+    font-size: 14px; 
+    line-height: 24px;
+   }
+   &__name {
+    @include f500;
+    color: #222222;
+   }
+   &__money {
+    color: $green;
+    @include f700;
+    }
+}
+.user__box, 
+.basket__box, 
+.notification__box, 
+.message__box {
+    position: relative;
+    height: 90px;
+    margin-top: 40px;
+    &:hover {
+        .user__menu {
+            height: auto;
+            border-width: 1px;
+            padding: 20px;
+            overflow: auto;
+            }
+    }
+}
+
+.user__menu {
+    border: solid 0px #cccccc;
+    position: absolute;
+    background-color: #fff;
+    padding: 0px 20px;
+    width: 115px;
+    top: 69px;
+    left: 20px;
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
+    a {
+        font-size: 12px;
+        color: #546e7a;
+        margin-bottom: 15px;
+    }
+}
+.basket__box,
+.notification__box, 
+.message__box {
+    margin-top: 54px;
+    margin-left: 15px;
+    &:hover {
+        .header__circle::before {
+            color: $bg;
+        }
+        .circle__menu {
+            overflow: hidden;
+            height: auto;
+        }
+        .circle__item {
+            padding: 23px 23px;
+            border-width: 1px;
+    
+        }
+    }
+}
+.circle__menu {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.circle__item {
+    background-color: #fff;
+    border: solid 0px #cccccc;
+    border-top: none;
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    width: 268px;
+    position: relative;
+    font-family: 'Roboto-Regular', sans-serif;
+    transition: all .3s;
+    border-top: solid 0.2px #cccccc;
+    &::before {
+        position: absolute;
+        top: 28px;
+        right: 30px;
+    }
+}
+.circle__images {
+    margin-right: 15px;
+}
+.circle__info {
+    &-name {
+    color: $bg;
+    @include f500;
+    }
+    &-theme {
+    font-size: 12px;
+    color: $green;
+    }
+    &-price {
+    color: #000000;
+    font-size: 16px;
+    @include f500;
+    }
+    &-date {
+        color: #707070;
+        font-size: 10px;
+    }
+}
+.basket__summ {
+    padding: 17px 17px 12px;
+    border: solid 0.2px #cccccc;
+    border-top: none;
+    background-color: #fff;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        @include f700;
+        font-size: 16px;
+        color: $bg;
+        padding-left: 13px;
+        padding-right: 22px;
+        margin-bottom: 15px;
+    }
+}
+.basket__btn {
+    width: 100px;
+    margin-left: 17px;
+    background-color: $green;
+    color: #fff;
+    @include f700;
+    font-size: 14px;
+    padding: 12px 5px;
+    text-align: center;
+    &-checkout {
+        width: 123px;
+        background-color: #e85647;
+        margin-left: 6px;
+    }
+}
+.notification__menu,
+.message__menu {
+    .circle__images {
+        margin-right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+    .circle__info {
+        line-height: 18px;
+    }
+}
+.icons-color::before {
+    color: $tomato;
+}
+.header__btn-menu, 
+.menu__btn {
+    display: none;
+}
+
+// end header

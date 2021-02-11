@@ -11,6 +11,19 @@
     .header__text {
         display: none;
     }
+    .tutorial__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 990px){
+    .products__inner-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 @media (max-width: 840px) {
     .menu__list {
@@ -52,6 +65,16 @@
             }
         }
     }
+    .advantages {
+        &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        &__item {
+            margin-bottom: 50px;
+        }
+    }
 }
 @media (max-width: 900px){
     .footer__inner {
@@ -66,6 +89,13 @@
         margin-right: auto;
         & + & {
             margin-left: 45px;
+        }
+    }
+}
+@media (max-width: 675px){
+    .products__inner-btn {
+        button {
+            padding: 12px 15px;
         }
     }
 }
